@@ -11,7 +11,7 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "no-console": "error",
+    "no-console": "off",
     "@typescript-eslint/no-namespace": "off"
   },
   "root": true

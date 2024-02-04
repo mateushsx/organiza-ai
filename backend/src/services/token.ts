@@ -1,8 +1,11 @@
 import { sign, verify } from 'jsonwebtoken';
+import { env } from '~/settings/environment';
 
-const secret = process.env.SECRET || 'cxhcacchadhcaioeuoh';
+const secret = env.secret;
 
-export function createToken(payload: any) {
+type TCreateTokenPayload = string | object | Buffer;
+
+export function createToken(payload: TCreateTokenPayload) {
   return sign(payload, secret);
 }
 

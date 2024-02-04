@@ -1,16 +1,15 @@
 import express from 'express';
-import { config } from 'dotenv';
 import { userRoutes } from './routes/user';
 import { connectDatabase } from './settings/mongodb';
+import { env } from './settings/environment';
 
-config();
 connectDatabase();
 
 const server = express();
-const port = process.env.PORT || 3001;
+const port = env.port;
 
 server.use(express.json());
-server.use(express.urlencoded());
+server.use(express.urlencoded({ extended: true }));
 
 server.use(userRoutes);
 
