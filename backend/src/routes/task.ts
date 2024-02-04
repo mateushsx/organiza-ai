@@ -5,12 +5,13 @@ import {
   listTasksController,
   updateTaskController,
 } from '~/controllers/task';
+import { autheticationMiddleware } from '~/middlewares';
 
 const taskRoutes = Router();
 
-taskRoutes.post('/task/create', createTaskController);
-taskRoutes.post('/task/list', listTasksController);
-taskRoutes.put('/task/update', updateTaskController);
-taskRoutes.delete('/task/delete/:taskId', deleteTaskController);
+taskRoutes.post('/task/create', autheticationMiddleware, createTaskController);
+taskRoutes.post('/task/list', autheticationMiddleware, listTasksController);
+taskRoutes.put('/task/update', autheticationMiddleware, updateTaskController);
+taskRoutes.delete('/task/delete/:taskId', autheticationMiddleware, deleteTaskController);
 
 export { taskRoutes };
