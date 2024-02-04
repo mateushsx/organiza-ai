@@ -1,7 +1,8 @@
 import express from 'express';
 import { userRoutes } from './routes/user';
-import { connectDatabase } from './settings/mongodb';
+import { taskRoutes } from './routes/task';
 import { env } from './settings/environment';
+import { connectDatabase } from './settings/mongodb';
 
 connectDatabase();
 
@@ -12,6 +13,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
 server.use(userRoutes);
+server.use(taskRoutes);
 
 server.listen(port, () => {
   console.log(`Server is running in port ${port}`);
