@@ -16,11 +16,11 @@ export async function signupController(req: Request, res: Response) {
       email: email,
     });
 
-    if (userExists) return res.send('user-already-exists').status(401);
+    if (userExists) return res.status(400).send('user-already-exists');
 
     const passwordHash = createHash(password);
 
-    if (passwordHash instanceof Error) return res.send(passwordHash.message);
+    if (passwordHash instanceof Error) return res.status(401).send(passwordHash.message);
 
     const user = {
       id: crypto.randomUUID(),
@@ -33,9 +33,9 @@ export async function signupController(req: Request, res: Response) {
 
     const token = createToken({ id: user.id, email, name });
 
-    return res.json({ token, id: user.id }).status(201);
+    return res.status(201).json({ token, id: user.id });
   } catch (error) {
     console.log('ERROR signupController: >=>', error);
-    return res.send('internal-server-error').status(500);
+    return res.status(500).send('internal-server-error');
   }
 }
