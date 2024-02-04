@@ -14,7 +14,15 @@ export async function listTasksController(req: Request, res: Response) {
       createdBy: userId,
     });
 
-    return res.json(tasksDb || []).status(200);
+    const tasks = tasksDb.map((task) => ({
+      id: task.id,
+      title: task.title,
+      createdAt: task.createdAt,
+      createdBy: task.createdBy,
+      status: task.status,
+    }));
+
+    return res.json(tasks || []).status(200);
   } catch (error) {
     console.log('ERROR listTasksController: >=>', error);
     return res.send('internal-server-error').status(500);
