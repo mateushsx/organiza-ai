@@ -1,13 +1,7 @@
-import { MainRoutes } from "./routes/mainRoutes";
-
+import { MainRoutes } from './routes/mainRoutes';
 
 const Home = () => {
-
-
-  return (
-    <MainRoutes/>
-  )
+  return <MainRoutes />;
 };
-
 
 export default Home;
