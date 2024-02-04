@@ -7,7 +7,7 @@ Simplifique e planeje seu dia de maneira inteligente, garantindo a máxima segur
 ## A fazer 📊
 
 - [x] Cadastro de usuário
-- [ ] Login de usuário
+- [x] Login de usuário
 - [ ] Cadastro de tarefa
 - [ ] Listagem de tarefas
 - [ ] Atualizar uma tarefa
