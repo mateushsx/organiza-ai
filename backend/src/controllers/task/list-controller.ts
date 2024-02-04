@@ -5,10 +5,12 @@ import { UserModel } from '~/models/user';
 export async function listTasksController(req: Request, res: Response) {
   const { userId } = req.body;
 
+  if (!userId) return res.status(400).send('missing-param-userId');
+
   try {
     const user = await UserModel.findOne({ id: userId });
 
-    if (!user) return res.send('user-not-found').status(404);
+    if (!user) return res.status(404).send('user-not-found');
 
     const tasksDb = await TaskModel.find({
       createdBy: userId,
@@ -22,9 +24,9 @@ export async function listTasksController(req: Request, res: Response) {
       status: task.status,
     }));
 
-    return res.json(tasks || []).status(200);
+    return res.status(200).json(tasks || []);
   } catch (error) {
     console.log('ERROR listTasksController: >=>', error);
-    return res.send('internal-server-error').status(500);
+    return res.status(500).send('internal-server-error');
   }
 }
