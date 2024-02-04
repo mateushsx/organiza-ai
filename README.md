@@ -8,7 +8,7 @@ Simplifique e planeje seu dia de maneira inteligente, garantindo a máxima segur
 
 - [x] Cadastro de usuário
 - [x] Login de usuário
-- [ ] Cadastro de tarefa
-- [ ] Listagem de tarefas
+- [x] Cadastro de tarefa
+- [x] Listagem de tarefas
 - [ ] Atualizar uma tarefa
 - [ ] Deletar uma tarefa
