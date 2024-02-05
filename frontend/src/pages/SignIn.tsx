@@ -15,7 +15,7 @@ export const SignIn = () => {
         <form>
           <label className="flex flex-col mb-6">
             <span className="text-gray-400 font-semibold text-lg mb-2">
-              Email
+              E-mail
             </span>
             <input
               type="text"
