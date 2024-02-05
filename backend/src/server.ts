@@ -1,4 +1,6 @@
 import express from 'express';
+import cors from 'cors';
+
 import { userRoutes } from './routes/user';
 import { taskRoutes } from './routes/task';
 import { env } from './settings/environment';
@@ -9,6 +11,7 @@ connectDatabase();
 const server = express();
 const port = env.port;
 
+server.use(cors());
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
