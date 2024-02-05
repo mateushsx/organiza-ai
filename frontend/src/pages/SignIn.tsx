@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import wallpaperLogin from '../assets/images/wallpaperLogin.jpg';
 
 export const SignIn = () => {
@@ -33,6 +34,10 @@ export const SignIn = () => {
               className="w-96 border border-cyan-300 rounded-md px-3 py-2  outline-none"
             />
           </label>
+
+          <p className='mb-5'>Não tem uma conta?
+            <Link to={'/'} className=' ml-2 underline text-cyan-500 font-semibold'>Inscreva-se
+            </Link></p>
 
           <button
             type="submit"
