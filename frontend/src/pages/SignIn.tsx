@@ -9,14 +9,10 @@ export const SignIn = () => {
       </div>
 
       <div className="w-screen items-center justify-center flex flex-col gap-10">
-        <h1 className=" font-semibold uppercase text-3xl text-cyan-600">
-          Organiza Aí
-        </h1>
+        <h1 className=" font-semibold uppercase text-3xl text-cyan-600">Organiza Aí</h1>
         <form>
           <label className="flex flex-col mb-6">
-            <span className="text-gray-400 font-semibold text-lg mb-2">
-              E-mail
-            </span>
+            <span className="text-gray-400 font-semibold text-lg mb-2">E-mail</span>
             <input
               type="text"
               placeholder="Digite seu email"
@@ -25,9 +21,7 @@ export const SignIn = () => {
           </label>
 
           <label className="flex flex-col mb-6">
-            <span className=" text-gray-400 font-semibold text-lg mb-2">
-              Senha
-            </span>
+            <span className=" text-gray-400 font-semibold text-lg mb-2">Senha</span>
             <input
               type="password"
               placeholder="Digite sua senha"
@@ -35,9 +29,12 @@ export const SignIn = () => {
             />
           </label>
 
-          <p className='mb-5'>Não tem uma conta?
-            <Link to={'/'} className=' ml-2 underline text-cyan-500 font-semibold'>Inscreva-se
-            </Link></p>
+          <p className="mb-5">
+            Não tem uma conta?
+            <Link to={'/'} className=" ml-2 underline text-cyan-500 font-semibold">
+              Inscreva-se
+            </Link>
+          </p>
 
           <button
             type="submit"
