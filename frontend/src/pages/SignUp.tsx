@@ -11,10 +11,12 @@ export const SignUp = () => {
       ">
         <h1 className="text-white font-semibold text-3xl uppercase">Bem vindo de volta</h1>
         <p className="text-white font-semibold text-lg">Já possui uma conta? Clique no botão abaixo.</p>
-        <button className=" text-cyan-500 uppercase border border-white
+
+        <Link to={'/signin'}><button className=" text-cyan-500 uppercase border border-white
          bg-white w-60 rounded-3xl px-3 py-2 font-semibold text-lg hover:opacity-90 transition-all duration-300">
-          <Link to={'/signin'}> Entrar</Link>
+          Entrar
         </button>
+        </Link>
       </div>
 
       <div className="h-[100vh] w-[50vw] items-center justify-center flex flex-col gap-10">

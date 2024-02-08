@@ -41,7 +41,7 @@ export const SignIn = () => {
 
           <button
             type="submit"
-            className=" uppercase bg-cyan-400 w-96 rounded-md px-3 py-2 text-white 
+            className=" uppercase bg-cyan-400 w-96 rounded-3xl px-3 py-2 text-white 
           font-semibold text-xl hover:opacity-85 transition-all duration-300"
           >
             Entrar
